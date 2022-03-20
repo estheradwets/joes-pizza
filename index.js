@@ -11,6 +11,7 @@
       this.size = size
       this.crust = crust
       this.topping = topping
+      this.quantity = quantity
       
   }
     //   BUILDING PROTOTYPE
@@ -20,7 +21,9 @@
         let flavourprice;
         let sizeprice;
         let crustprice;
-        let toppingprice;  
+        let toppingprice; 
+        let quantity; 
+
         
 
         // FOR FLAVOUR
@@ -84,7 +87,7 @@
         return totalprice
         
     };
-    
+
     // AT CHECKOUT
     
     $("#checkout").click(function(){
@@ -92,9 +95,12 @@
         let size = $("#psize option:selected").val();
         let crust = $("#pcrust option:selected").val();
         let topping = $("#ptopping option:selected").val();
-         let newOrder = new Pizzeria(flavour,size,crust,topping)
+        let quantity = $("#pquantity option:selcted").val();
+         let newOrder = new Pizzeria(flavour,size,crust,topping,quantity)
     
-         console.log(newOrder.totalcost())
+        //  console.log(newOrder.totalcost())
+        console.log(quantity)
+         
     
      });
 
