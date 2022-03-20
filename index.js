@@ -12,7 +12,7 @@
 });
 
  //Get inputs
- $("#finish").click(function () {
+ $("#checkout").click(function () {
     let flavour =$("#flavour option:selected").val();
     let size = $("#psize option:selected").val();
     let crust = $("#pcrust option:selected").val();
@@ -179,7 +179,7 @@
 
     
 
-        $('#list').text(" ");
+        $('#list').text(" ")
         $("#list").append("<br>" + "Flavour Chosen is:   " + newOrder.f + "<br>" + "Size :   "
             + newOrder.s + "<br>" + "Crust Chosen is:     "
             + newOrder.c + "<br>" + "Toppings Chosen:     "

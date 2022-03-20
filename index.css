@@ -46,3 +46,12 @@ body{
 #checkout{
     margin-left: 151px;
 }
+
+
+#contact{
+    background-image: url("https://images.pexels.com/photos/5561131/pexels-photo-5561131.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: x-large;
+    text-align: center;
+}
