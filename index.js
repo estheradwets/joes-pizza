@@ -141,10 +141,10 @@
 
      });
 
-     $("#yes").click(function(e)
+     $("#youraddress").click(function(e)
      { e.preventDefault
          prompt("What's your location?")
-         alert("Your Pizza is Enroute, Just a few minutes before you merry!")
+         alert("Your Pizza is Enroute, we will deliver to your location in a few!")
      })
 
     
