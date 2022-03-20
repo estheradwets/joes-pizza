@@ -6,86 +6,112 @@
 
 //  BUILDING CONSTRUCTOR
 
-  function Pizzeria(flavour,size,crust,topping,quantity){
+  function Pizzeria(flavour,size,crust,topping,quantity,delivery){
       this.flavour = flavour
       this.size = size
       this.crust = crust
       this.topping = topping
       this.quantity = quantity
-      
+      this.delivery = delivery
   }
     //   BUILDING PROTOTYPE
 
 
     Pizzeria.prototype.totalcost = function(){
-        let flavourprice;
-        let sizeprice;
-        let crustprice;
-        let toppingprice; 
-        let quantity; 
+        let flavourPrice;
+        let sizePrice;
+        let crustPrice;
+        let toppingPrice; 
+        let numberOfPizza; 
+        let deliveryPrice;
 
         
 
         // FOR FLAVOUR
 
         if (this.flavour==="chicken"){
-            flavourprice = 1000;
+            flavourPrice = 1000;
         }
     
         else if (this.flavour==="vegan"){
-            flavourprice = 800
+            flavourPrice = 800
         }
         else{
-            flavourprice = 500
+            flavourPrice = 500
         }
 
-      console.log(flavourprice)
+      console.log(flavourPrice)
 
     // FOR SIZE
 
         if (this.size==="larger"){
-            sizeprice = 100;
+            sizePrice = 100;
         }
         else if (this.size==="regular"){
-            sizeprice = 50
+            sizePrice = 50
         }
         else{
-            sizeprice = 10
+            sizePrice = 10
         }
-        console.log(sizeprice)
+        console.log(sizePrice)
 
         // FOR CRUST
           
         if( this.crust==="thick"){
-            crustprice = 150;
+            crustPrice = 150;
         }
         else if(this.crust ==="thin"){
-            crustprice = 100
+            crustPrice = 100
         }
         else{
-           crustprice = 10
+           crustPrice = 10
         }
-        console.log(crustprice)
+        console.log(crustPrice)
 
         // FOR TOPPING
   
         if( this.topping==="best"){
-            toppingprice = 100;
+            toppingPrice = 100;
         }
         else if(this.topping ==="better"){
-            toppingprice = 50
+            toppingPrice = 50
         }
         else{
-           toppingprice = 10
+           toppingPrice = 10
         }
-        console.log(toppingprice)
 
-        let totalprice = (flavourprice + sizeprice + crustprice + toppingprice)*parseInt(quantity)
+        console.log(toppingPrice)
+
+        // FOR Number
+        if( this.quantity<=0){
+            numberOfPizza = 0;
+        }
+        else{
+            numberOfPizza = this.quantity   
+         }
+       console.log(numberOfPizza)
+
+    //  FOR DELIVERY
+
+    if( this.delivery=="yes"){
+        deliveryPrice = 200;
+    }
+    else{
+        deliveryPrice = 0  
+     }
+   console.log(deliveryPrice)
+
+
+        let totalprice = (flavourPrice + sizePrice + crustPrice + toppingPrice)*numberOfPizza
+
         console.log(totalprice)
-        let total = parseInt(this.quantity)*totalprice
+
+        let total = totalprice + deliveryPrice
         
         console.log(total)
-        return totalprice
+        return total
+
+    
         
     };
 
@@ -96,65 +122,30 @@
         let size = $("#psize option:selected").val();
         let crust = $("#pcrust option:selected").val();
         let topping = $("#ptopping option:selected").val();
-        let quantity = $("#pquantity").val();
-         let newOrder = new Pizzeria(flavour,size,crust,topping,quantity)
+        let enjoyment = $("#pquantity").val();
+        let delivery = $("input[name = 'choice']:checked").val()
+         let newOrder = new Pizzeria(flavour,size,crust,topping,enjoyment,delivery)
     
-        /console.log(newOrder.totalcost())
-        /* console.log(quantity)
-        console.log(flavour)
-        console.log(size)
-        console.log(crust)
-        console.log(topping) */
+        console.log(newOrder.totalcost())
         
-         
-    
+        // TABLE JS
+        $(".table").append(
+           "<tr>" +"<td>"+ flavour + "</td>"
+            +"<td>"+ size + "</td>"
+            +"<td>"+ crust+ "</td>"
+            +"<td>"+ topping + "</td>"
+            +"<td>"+ enjoyment + "</td>" 
+            +"<td>" + newOrder.totalcost() + "</td>"
+            +"</tr>"
+        )
+
      });
 
-
-     /*  $(".table").hide();
-      $(".additional-buttons").hide();
-      $(".additional-info").hide();
-      $(".btn.yes").hide();
-      $(".btn.no").hide();
-      $(".additional-info h4").hide();
-
-      $('.btn.order').click(function() {
-        var sizeOfPizza = $("#psize option:selected").val();
-        var toppingsOfPizza = $("#ptopping option:selected").val();
-        var crustOfPizza = $("#pcrust option:selected").val();
-        var total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
-        var order = 1;
-        var grandTotal = 0;
-    
-        $(".table").show();
-        $(".additional-buttons").show();
-        $(".btn.order").hide();
-    
-        $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-        $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
-        $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-        $("#total").html(total);
+     $("#yes").click(function(e)
+     { e.preventDefault
+         prompt("What's your location?")
+         alert("Your Pizza is Enroute, Just a few minutes before you merry!")
+     })
 
     
-
-
- */
-
-
-
-
-
-
-
-
-
-
- /* $("#submit").click(function(e){
-    e.preventDefault()
-    var name=$("#jina").val()
-    var email=$("#email").val()
-   var message=$("#message").val()
-
-  alert(`${name} Your message has been submitted`)
-  });
-   */
+     
