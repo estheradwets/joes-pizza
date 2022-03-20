@@ -82,8 +82,9 @@
 
         let totalprice = (flavourprice + sizeprice + crustprice + toppingprice)*parseInt(quantity)
         console.log(totalprice)
-        // let total = parseInt(quantity)*totalprice
-        // console.log(total)
+        let total = parseInt(this.quantity)*totalprice
+        
+        console.log(total)
         return totalprice
         
     };
@@ -95,11 +96,16 @@
         let size = $("#psize option:selected").val();
         let crust = $("#pcrust option:selected").val();
         let topping = $("#ptopping option:selected").val();
-        let quantity = $("#pquantity option:selcted").val();
+        let quantity = $("#pquantity").val();
          let newOrder = new Pizzeria(flavour,size,crust,topping,quantity)
     
-        //  console.log(newOrder.totalcost())
-        console.log(quantity)
+        /console.log(newOrder.totalcost())
+        /* console.log(quantity)
+        console.log(flavour)
+        console.log(size)
+        console.log(crust)
+        console.log(topping) */
+        
          
     
      });
