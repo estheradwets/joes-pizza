@@ -4,11 +4,6 @@
 });
  */
 
-
- //View inputs
-
-
-
 //  BUILDING CONSTRUCTOR
 
   function Pizzeria(flavour,size,crust,topping,quantity){
@@ -89,6 +84,8 @@
         return totalprice
         
     };
+    
+    // AT CHECKOUT
     
     $("#checkout").click(function(){
         let flavour =$("#flavour option:selected").val();
