@@ -22,3 +22,16 @@ body{
 #count{
     margin-bottom: 30px;
 }
+
+/* DETAILS SECTION */
+#details{
+    margin-top: 200px;
+}
+
+#termsapply{
+    margin-left: 150px;
+    margin-top: 25px;
+}
+#checkout{
+    margin-left: 151px;
+}
