@@ -11,7 +11,7 @@
 
 //  BUILDING CONSTRUCTOR
 
-  function Pizzeria(flavour,size,crust,topping,){
+  function Pizzeria(flavour,size,crust,topping,quantity){
       this.flavour = flavour
       this.size = size
       this.crust = crust
@@ -100,29 +100,6 @@
          console.log(newOrder.totalcost())
     
      });
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
      /*  $(".table").hide();
