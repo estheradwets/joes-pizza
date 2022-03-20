@@ -2,12 +2,18 @@ body{
     background-color: red;
 }
 
-#spacediv{
+#introduction{
     background-color: aliceblue;
+    margin-top: 50px;
+    padding-left: 100px;
+}
+
+#formquestion{
+    padding-top: 45px;
 }
 
 #psize{
-    margin-top: 150px;
+    margin-top: 45px;
 }
 
 #pcrust{
@@ -25,7 +31,7 @@ body{
 
 /* DETAILS SECTION */
 #details{
-    margin-top: 200px;
+    margin
 }
 
 #termsapply{
