@@ -1,11 +1,20 @@
 body{
-    background-color: red;
+   
+}
+#header{
+    background-image: url("https://images.pexels.com/photos/1411677/pexels-photo-1411677.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tagline{
+    font-size: 100px;
 }
 
 #introduction{
-    background-color: aliceblue;
     margin-top: 50px;
-    padding-left: 100px;
+    padding-left: 50px;
+    font-size: 50px;
 }
 
 #formquestion{
