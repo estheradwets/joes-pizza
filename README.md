@@ -18,7 +18,7 @@
 
 ## Installation
 
-To gain acess to this website click on this link: https://estheradwets.github.io/joesspace-pizza/
+To gain acess to this website click on this link: https://estheradwets.github.io/joes-pizza/
 
 ### Requirements
 
@@ -28,7 +28,7 @@ To gain acess to this website click on this link: https://estheradwets.github.io
 
 ### Installation Process
 
-To have access, view, explore and, or use this website, click on this link: https://estheradwets.github.io/joesspace-pizza/
+To have access, view, explore and, or use this website, click on this link: https://estheradwets.github.io/joes-pizza/
 ## Technology Used
 
 * HTML - which was used to build the structure of the web pages.
