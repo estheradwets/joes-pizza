@@ -57,10 +57,10 @@
 
         // FOR CRUST
           
-        if( this.crust==="thick"){
+        if( this.crust==="Crunchy"){
             crustPrice = 150;
         }
-        else if(this.crust ==="thin"){
+        else if(this.crust ==="Thick"){
             crustPrice = 100
         }
         else{
@@ -70,10 +70,10 @@
 
         // FOR TOPPING
   
-        if( this.topping==="best"){
+        if( this.topping==="Brocolli"){
             toppingPrice = 100;
         }
-        else if(this.topping ==="better"){
+        else if(this.topping ==="Roasted"){
             toppingPrice = 50
         }
         else{
