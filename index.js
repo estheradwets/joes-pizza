@@ -147,5 +147,17 @@
          alert("Your Pizza is Enroute, we will deliver to your location in a few!")
      })
 
+// ON SUBMIT BUTTON
+
+$(document).ready(function(){
+    $("#submit").click(function(e){
+      e.preventDefault()
+      var name = $("#jina").val();
+      var email = $("#email").val();
+      var message = $("#message").val();
+      alert(`Hello ${name}. Your Email address is ${email}.Just to be sure your
+      Message is : ${message}`)
+    });
+
     
-     
+});
